@@ -1,0 +1,41 @@
+
+TARGET testdraw.exe
+TARGETTYPE exe
+UID 0 0xe000A0BC
+CAPABILITY ReadUserData WriteUserData
+
+EPOCHEAPSIZE 6000000 64000000
+EPOCSTACKSIZE 80000
+
+SYSTEMINCLUDE \epoc32\include
+
+
+
+SOURCEPATH .
+SOURCE app.cpp
+
+SOURCEPATH .
+
+
+START RESOURCE testdraw_reg.rss
+TARGET testdraw_reg
+TARGETPATH \private\10003a3f\apps
+END
+
+START RESOURCE  testdraw.rss
+HEADER
+TARGET		testdraw
+TARGETPATH      resource\apps
+END  // RESOURCE
+
+
+LIBRARY euser.lib
+LIBRARY bafl.lib
+LIBRARY avkon.lib
+LIBRARY apparc.lib
+LIBRARY cone.lib
+LIBRARY eikcore.lib
+LIBRARY bitgdi.lib
+LIBRARY fbscli.lib
+LIBRARY gdi.lib
+

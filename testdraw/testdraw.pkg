@@ -1,0 +1,37 @@
+; Installation file for Snapper application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"testdraw"},(0xe000A0BC),1,0,0
+
+;Localised Vendor name
+%{"Vendor-EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Supports S60 5th Edition
+[0x1028315F], 0, 0, 0, {"Series60ProductID"}
+
+;Supports Symbian^3
+[0x20022E6D], 0, 0, 0, {"Series60ProductID"}
+
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"\root\symbian-sdks\s60_31\epoc32\release\gcce\urel\testdraw.exe" -"c:\sys\bin\testdraw.exe"
+"\root\symbian-sdks\s60_31\epoc32\data\z\private\10003a3f\apps\testdraw_reg.rsc" -"c:\private\10003a3f\import\apps\testdraw_reg.rsc"
+"\root\symbian-sdks\s60_31\epoc32\data\z\resource\apps\testdraw.rsc" -"c:\resource\apps\testdraw.rsc"
+    
